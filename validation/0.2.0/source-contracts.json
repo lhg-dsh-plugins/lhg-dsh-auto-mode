@@ -1,0 +1,109 @@
+{
+  "from": "21638c56315ae6a2b552d6091945d3144c9af32e",
+  "to": "639ed015397290b3745d163aafe02ffee4aa3f84",
+  "contracts": [
+    {
+      "path": "packages/interaction/permission-presets/src",
+      "fromTree": "80b5e642837ad01106073a2b6f7f167cd5bd75f3",
+      "toTree": "80b5e642837ad01106073a2b6f7f167cd5bd75f3",
+      "unchanged": true
+    },
+    {
+      "path": "packages/interaction/user-approval/src",
+      "fromTree": "2881cb503b111a8484a02e1adc7e22f297efc792",
+      "toTree": "2881cb503b111a8484a02e1adc7e22f297efc792",
+      "unchanged": true
+    },
+    {
+      "path": "packages/core/session/src",
+      "fromTree": "4f965bf18c3e072fa4b731330556c00648575efe",
+      "toTree": "4f965bf18c3e072fa4b731330556c00648575efe",
+      "unchanged": true
+    },
+    {
+      "path": "packages/core/tools/src",
+      "fromTree": "234fb99ccd1b00e520859e94577a373c8a1434ad",
+      "toTree": "234fb99ccd1b00e520859e94577a373c8a1434ad",
+      "unchanged": true
+    },
+    {
+      "path": "packages/core/system-prompt/src",
+      "fromTree": "1431311a804da6c5780b5279f342b15f24cc59d3",
+      "toTree": "1431311a804da6c5780b5279f342b15f24cc59d3",
+      "unchanged": true
+    },
+    {
+      "path": "packages/core/agent/src",
+      "fromTree": "8fbb7ac176566c0e662ef14db73280a8b6f2314b",
+      "toTree": "8fbb7ac176566c0e662ef14db73280a8b6f2314b",
+      "unchanged": true
+    },
+    {
+      "path": "packages/core/agent-loop/src",
+      "fromTree": "5a2686dd0a39ce73aab152abc030e8e2d650791e",
+      "toTree": "5a2686dd0a39ce73aab152abc030e8e2d650791e",
+      "unchanged": true
+    },
+    {
+      "path": "packages/subagent/subagent/src",
+      "fromTree": "ec992265e66d9911114dd63f440f23b14d98a8bd",
+      "toTree": "ec992265e66d9911114dd63f440f23b14d98a8bd",
+      "unchanged": true
+    },
+    {
+      "path": "packages/subagent/subagent-in-process-driver/src",
+      "fromTree": "62bec5db98c83c0deb19b44d3f30965203fbeb97",
+      "toTree": "62bec5db98c83c0deb19b44d3f30965203fbeb97",
+      "unchanged": true
+    },
+    {
+      "path": "packages/llm/llm/src",
+      "fromTree": "fabaf75e13a3b2afa6476a5db9df63144900390a",
+      "toTree": "fabaf75e13a3b2afa6476a5db9df63144900390a",
+      "unchanged": true
+    },
+    {
+      "path": "packages/sandbox/sandbox/src",
+      "fromTree": "55f753ce98a18861500c35423b72aad1efc02562",
+      "toTree": "55f753ce98a18861500c35423b72aad1efc02562",
+      "unchanged": true
+    },
+    {
+      "path": "packages/sandbox/sandbox-policy/src",
+      "fromTree": "8990ff375bf3be6f519a12d4bf6a76e84713b717",
+      "toTree": "8990ff375bf3be6f519a12d4bf6a76e84713b717",
+      "unchanged": true
+    },
+    {
+      "path": "packages/session/session-persistence/src",
+      "fromTree": "3ae0231057477b69e054bf042c7e41f0844b20b4",
+      "toTree": "3ae0231057477b69e054bf042c7e41f0844b20b4",
+      "unchanged": true
+    },
+    {
+      "path": "packages/session/session-persistence-jsonl/src",
+      "fromTree": "870192dddac33666dc11aaa4ae70d7d485cebda5",
+      "toTree": "870192dddac33666dc11aaa4ae70d7d485cebda5",
+      "unchanged": true
+    },
+    {
+      "path": "packages/session/session-format-v3-to-v4/src",
+      "fromTree": "03de2ffcdb7ba23dc702217f7f5cf5e5477ac60f",
+      "toTree": "03de2ffcdb7ba23dc702217f7f5cf5e5477ac60f",
+      "unchanged": true
+    },
+    {
+      "path": "packages/experimental/auto-review/src",
+      "fromTree": "b6f75d74e6c7cab2ea05ad4a124bf8dcdf0f5453",
+      "toTree": "b6f75d74e6c7cab2ea05ad4a124bf8dcdf0f5453",
+      "unchanged": true
+    },
+    {
+      "path": "vendor/cordis",
+      "fromTree": "b760d30b583c7f7c127fabb0df675f6bcdb7da7b",
+      "toTree": "b760d30b583c7f7c127fabb0df675f6bcdb7da7b",
+      "unchanged": true
+    }
+  ],
+  "conclusion": "No source API migration required in plugin Host paths; exact whitelist/cohort update and runtime artifact acceptance still required."
+}

@@ -1,0 +1,81 @@
+name: Publish Package
+on:
+  push:
+    tags: ['v*.*.*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Retry the current accepted version from its existing immutable tag
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: npm-publish-auto-mode
+  cancel-in-progress: false
+jobs:
+  metadata:
+    if: github.repository == 'NanmiCoder/dsh-auto-mode'
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+      dist-tag: ${{ steps.release.outputs.dist-tag }}
+      source-sha: ${{ steps.release.outputs.source-sha }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.21.0'
+          package-manager-cache: false
+      - run: node --test scripts/release-metadata.test.mjs
+      - id: release
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: node scripts/release-metadata.mjs --registry-check
+  verify:
+    needs: metadata
+    uses: ./.github/workflows/verify.yml
+    with:
+      source-ref: ${{ needs.metadata.outputs.source-sha }}
+  publish:
+    needs: [metadata, verify]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.21.0'
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+      - run: npm install --global npm@11.19.0
+      - uses: actions/download-artifact@v4
+        with:
+          name: npm-candidate
+          path: release
+      - run: cd release && sha256sum --check SHA256SUMS
+      - run: node scripts/verify-release-artifact.mjs release/package.tgz
+      - run: node scripts/release-metadata.mjs --registry-check
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+          RELEASE_SOURCE_SHA: ${{ needs.metadata.outputs.source-sha }}
+      - name: Publish the matrix-tested artifact
+        env:
+          DIST_TAG: ${{ needs.metadata.outputs.dist-tag }}
+        run: npm publish ./release/package.tgz --ignore-scripts --provenance --access public --tag "$DIST_TAG"
+      - name: Publish release notes and verified artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ needs.metadata.outputs.tag }}
+          DIST_TAG: ${{ needs.metadata.outputs.dist-tag }}
+        shell: bash
+        run: |
+          args=()
+          if [[ "$DIST_TAG" == next ]]; then args+=(--prerelease); fi
+          gh release create "$RELEASE_TAG" release/package.tgz release/SHA256SUMS --verify-tag --title "$RELEASE_TAG" --notes-file RELEASE_NOTES.md "${args[@]}"

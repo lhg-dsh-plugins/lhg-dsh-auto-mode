@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "entry": "dsh --profile headless",
+  "hostVersion": "0.2.0-rc.2",
+  "artifactSha256": "4f80cc04be461357da6b8764030070ca71e409b5c08b4b06b4c24436e5fd2948",
+  "phases": [
+    {
+      "passed": true,
+      "phase": "seed",
+      "results": [
+        {
+          "id": "legacy-ask",
+          "events": 6,
+          "identity": "auto",
+          "sandbox": "workspace-write",
+          "approval": "ask",
+          "projected": "workspace-write"
+        },
+        {
+          "id": "legacy-never",
+          "origin": "subagent",
+          "parentSession": "legacy-ask",
+          "events": 6,
+          "identity": "auto",
+          "sandbox": "workspace-write",
+          "approval": "never",
+          "projected": "custom"
+        },
+        {
+          "id": "official-auto",
+          "events": 6,
+          "identity": "auto",
+          "sandbox": "danger-full-access",
+          "approval": "ask",
+          "projected": "auto"
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "phase": "restore",
+      "results": [
+        {
+          "id": "legacy-ask",
+          "events": 8,
+          "identity": "sandbox-auto",
+          "sandbox": "workspace-write",
+          "approval": "ask",
+          "projected": "sandbox-auto"
+        },
+        {
+          "id": "legacy-never",
+          "origin": "subagent",
+          "parentSession": "legacy-ask",
+          "events": 8,
+          "identity": "sandbox-auto",
+          "sandbox": "workspace-write",
+          "approval": "never",
+          "projected": "custom"
+        },
+        {
+          "id": "official-auto",
+          "events": 7,
+          "identity": "auto",
+          "sandbox": "danger-full-access",
+          "approval": "ask",
+          "projected": "auto"
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "phase": "restart",
+      "results": [
+        {
+          "id": "legacy-ask",
+          "events": 9,
+          "identity": "sandbox-auto",
+          "sandbox": "workspace-write",
+          "approval": "ask",
+          "projected": "sandbox-auto"
+        },
+        {
+          "id": "legacy-never",
+          "origin": "subagent",
+          "parentSession": "legacy-ask",
+          "events": 9,
+          "identity": "sandbox-auto",
+          "sandbox": "workspace-write",
+          "approval": "never",
+          "projected": "custom"
+        },
+        {
+          "id": "official-auto",
+          "events": 7,
+          "identity": "auto",
+          "sandbox": "danger-full-access",
+          "approval": "ask",
+          "projected": "auto"
+        }
+      ]
+    }
+  ],
+  "diskChecks": [
+    {
+      "phase": "restore",
+      "id": "legacy-ask",
+      "previousBytes": 636,
+      "currentBytes": 794,
+      "preserved": true
+    },
+    {
+      "phase": "restore",
+      "id": "legacy-never",
+      "previousBytes": 689,
+      "currentBytes": 847,
+      "preserved": true
+    },
+    {
+      "phase": "restore",
+      "id": "official-auto",
+      "previousBytes": 642,
+      "currentBytes": 709,
+      "preserved": true
+    },
+    {
+      "phase": "restart",
+      "id": "legacy-ask",
+      "previousBytes": 794,
+      "currentBytes": 861,
+      "preserved": true
+    },
+    {
+      "phase": "restart",
+      "id": "legacy-never",
+      "previousBytes": 847,
+      "currentBytes": 914,
+      "preserved": true
+    },
+    {
+      "phase": "restart",
+      "id": "official-auto",
+      "previousBytes": 709,
+      "currentBytes": 709,
+      "preserved": true
+    }
+  ],
+  "scope": "Native V4 logs with legacy Auto permission identity, including subagent lineage. Does not test V3-to-V4 artifact-format migration."
+}

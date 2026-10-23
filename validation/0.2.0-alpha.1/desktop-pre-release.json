@@ -1,0 +1,34 @@
+{
+  "candidate": "0.2.0-alpha.1",
+  "published": false,
+  "upstreamCommit": "21638c56315ae6a2b552d6091945d3144c9af32e",
+  "upstreamVersion": "0.1.7-rc.2",
+  "artifactSha256": "12cf13e4f0ce0d5c00fbf4671f6295f963f6cf8315f9bdc17d613be9cb1ab2af",
+  "unitTests": {
+    "passed": 214,
+    "skipped": 5
+  },
+  "evidence": {
+    "newHostFixture": "/tmp/auto-mode-pre020-fixture-rc2-v2/result.json",
+    "realApi": "/tmp/auto-mode-pre020-real-api-editor-fix/real-api-result.json",
+    "persistence": "/tmp/auto-mode-pre020-persistence-v4/summary.json",
+    "legacyHostFixture": "/tmp/auto-mode-pre020-legacy015rc2/result.json",
+    "gitInstaller": "/tmp/auto-mode-git-install-bhedJl/result.json"
+  },
+  "desktop": {
+    "tarballInstalled": true,
+    "pluginRunning": true,
+    "restartPersisted": true,
+    "accountStatus": "credential-stored",
+    "accountAuthorizationPhase": "succeeded",
+    "accountSmokeFileExactBytes": true,
+    "uiSurface": "Ego connected to Electron-started Desktop Host loopback",
+    "slashTabConfirmation": true,
+    "npmNameInstall": true,
+    "npmRegistry": "temporary loopback registry, with actual artifact creation time and official production dependency metadata",
+    "gitInstall": true,
+    "gitSource": "temporary git+file repository, exact candidate commit",
+    "gitPluginEnabled": true
+  },
+  "note": "Pre-release desktop evidence before the final initialization guard and LF build fix; final artifact validation is separately recorded."
+}

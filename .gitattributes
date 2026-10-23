@@ -1,0 +1,6 @@
+# Preserve the pinned upstream bytes on Windows checkouts as well as POSIX.
+skills/** text eol=lf
+# TypeScript preserves source newlines inside template literals even with newLine=lf.
+# Keep those bytes stable before the client bundler embeds them in sourcesContent.
+src/** text eol=lf
+lib/** text eol=lf

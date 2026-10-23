@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "real-harness-product-entry-with-deterministic-fixture",
+  "realApi": false,
+  "pluginVersion": "0.1.9",
+  "artifactSha256": "1094c9fae16f7ff94164cba70bcb2160837978d31014b79537d3f00c1f12e464",
+  "packToolchain": {
+    "node": "24.20.0",
+    "npm": "11.19.0",
+    "note": "Packed from the frozen tree with the publish workflow toolchain; the CI tarball hash was reproduced byte-for-byte before tagging, and every acceptance below ran on this exact artifact."
+  },
+  "workspace": "/tmp (existing workspace; /private/tmp is the macOS alias)",
+  "doctorRegressionTests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "scriptSha256": {
+    "scripts/harness-doctor.mjs": "0fbf26906b0ed790032536296a9c6a8c8e96215703caf704f0a61848dc5a6bb1",
+    "scripts/harness-runtime-verify.mjs": "24e1699b16ce55807a5a85d4d5723e0db2dd8c7f3b39e62413ffcacf3ef60d76",
+    "scripts/harness-doctor.test.mjs": "d1f76a5f954ec9cd948aed05d1d0c35e9bb0599f3cee2093d1bbff0fa3306cd0",
+    "scripts/fixtures/harness-runtime-llm.mjs": "ab6d02759fafa9503c28946f1356cf5d54851fc5691475f2f7cb519ab0633e47"
+  },
+  "matrix": [
+    {
+      "hostVersion": "0.1.5-rc.1",
+      "passed": true,
+      "assertions": 22,
+      "cohortPackages": 231,
+      "artifactFilesCompared": 70,
+      "nodeVersion": "v26.7.0",
+      "platform": "darwin",
+      "reportSha256": "69be6cf147320dd91b3cd9eb9e5c8b9377af87ef43358b78ef46918abf2068cc"
+    },
+    {
+      "hostVersion": "0.1.2-rc.1",
+      "passed": true,
+      "assertions": 22,
+      "cohortPackages": 214,
+      "artifactFilesCompared": 70,
+      "nodeVersion": "v26.7.0",
+      "platform": "darwin",
+      "reportSha256": "1f422d4c00e32ef9b4e057a54156bbedb52a94ddfc9d8b4c5dea708513613e7b"
+    },
+    {
+      "hostVersion": "0.1.2-alpha.5",
+      "passed": true,
+      "assertions": 22,
+      "cohortPackages": 214,
+      "artifactFilesCompared": 70,
+      "nodeVersion": "v26.7.0",
+      "platform": "darwin",
+      "reportSha256": "61dd48571ca5e9d93abe4532eaca707095033b3f236773cb37d03a247f4554ff"
+    },
+    {
+      "hostVersion": "0.1.2-alpha.3",
+      "passed": true,
+      "assertions": 22,
+      "cohortPackages": 215,
+      "artifactFilesCompared": 70,
+      "nodeVersion": "v26.7.0",
+      "platform": "darwin",
+      "reportSha256": "c6877780098b19940be19d30e6b8f481396bb6eb11accdf49e3d0ddbadc0b0ac"
+    },
+    {
+      "hostVersion": "0.1.2-alpha.2",
+      "passed": true,
+      "assertions": 22,
+      "cohortPackages": 215,
+      "artifactFilesCompared": 70,
+      "nodeVersion": "v26.7.0",
+      "platform": "darwin",
+      "reportSha256": "1e02f104c03c4bcc0d38eccbe1bf30c5af14a21897330cb6119850f81c6b3ccc"
+    }
+  ],
+  "coverage": [
+    "coherent full DSH cohort and resolved peer identity at the exact 0.1.5-rc.1 closure (231 packages; the 0.1.2 cohort has 214/215)",
+    "all 69 packaged regular file hashes matched against the same tarball",
+    "actual service and Session class identities in the launched process",
+    "ordinary Bash and field-less retry with temporary schema projection",
+    "native classifier allow/deny/ask and exact one-shot approval audit",
+    "three classifier failures followed by explicit manual approval",
+    "hard denial leaves synthetic protected canary unchanged",
+    "real child session inherits Auto; child cannot widen permissions",
+    "side effects verified outside the model; normal exit and no remaining process group"
+  ],
+  "hostNote": "Harness 0.1.5-rc.1 is the npm latest and the recommended host; the four 0.1.2 hosts remain regression-tested. The 0.1.5-rc.1 cohort adds 17 packages and drops 4 compared with 0.1.2-rc.1, so the full override list was regenerated from the resolved closure instead of re-versioned in place.",
+  "unverified": [
+    "real provider APIs (see real-api.json)",
+    "browser interactions (see web.json)",
+    "PowerShell and Windows sandbox",
+    "live user-data migrations"
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "passed": true,
+  "kind": "real-product-entry-with-fixture-model",
+  "realApi": false,
+  "version": "0.1.7-rc.2",
+  "pluginVersion": "0.2.0-alpha.1",
+  "artifactSha256": "55ee498d7fc5286010e1bad016159a00c1a0930796f22e2a511ecf8b4f91924a",
+  "fixtureSha256": "ab6d02759fafa9503c28946f1356cf5d54851fc5691475f2f7cb519ab0633e47",
+  "runnerSha256": "b685ad589cfc174579e6ad2e769c8d63d83241332104844601b8e9c6d9cd3f63",
+  "doctorSha256": "0fbf26906b0ed790032536296a9c6a8c8e96215703caf704f0a61848dc5a6bb1",
+  "node": "v24.21.0",
+  "platform": "darwin",
+  "cwd": "/tmp",
+  "processIdentity": {
+    "cwd": "/private/tmp",
+    "node": "v24.21.0"
+  },
+  "cohortCount": 273,
+  "exit": {
+    "code": 0,
+    "signal": null,
+    "timedOut": false,
+    "remainingProcessGroup": false
+  },
+  "assertions": {
+    "verificationCodeUnchanged": true,
+    "normalExit": true,
+    "noRemainingProcessGroup": true,
+    "productMarker": true,
+    "fixtureActive": true,
+    "activeServiceIdentitiesMatch": true,
+    "allToolsSettledCorrectly": true,
+    "ordinaryFile": true,
+    "fieldlessRetryExecuted": true,
+    "exactAllowExecuted": true,
+    "childExecuted": true,
+    "deniedEffectsAbsent": true,
+    "canaryUnchanged": true,
+    "allSessionCwdExistingTmp": true,
+    "parentAutoActive": true,
+    "childInheritedGuidance": true,
+    "recoverySchemaFieldsRemoved": true,
+    "ordinarySchemaFieldsRestored": true,
+    "classifierRouteReused": true,
+    "oneShotGrantAudited": true,
+    "manualAnswererUsedOnlyForAsks": true,
+    "actualProcessMatchesLaunch": true
+  },
+  "toolResults": [
+    {
+      "event": "tool-result",
+      "label": "ordinary",
+      "name": "bash",
+      "isError": false,
+      "value": {
+        "kind": "foreground",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "aborted": false,
+        "timeoutMs": 60000,
+        "stdout": {
+          "text": "",
+          "truncated": false
+        },
+        "stderr": {
+          "text": "",
+          "truncated": false
+        },
+        "sandbox": {
+          "mode": "workspace-write",
+          "denied": false,
+          "enforcement": "full"
+        }
+      },
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346341
+    },
+    {
+      "event": "tool-result",
+      "label": "redundant",
+      "name": "bash",
+      "isError": true,
+      "error": "[auto-mode redundant sandbox request] Auto already runs in workspace-write. Retry the same tool call after completely removing sandbox_permissions and justification; this call did not execute.",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346354
+    },
+    {
+      "event": "tool-result",
+      "label": "recovery",
+      "name": "bash",
+      "isError": false,
+      "value": {
+        "kind": "foreground",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "aborted": false,
+        "timeoutMs": 60000,
+        "stdout": {
+          "text": "",
+          "truncated": false
+        },
+        "stderr": {
+          "text": "",
+          "truncated": false
+        },
+        "sandbox": {
+          "mode": "workspace-write",
+          "denied": false,
+          "enforcement": "full"
+        }
+      },
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346388
+    },
+    {
+      "event": "tool-result",
+      "label": "classifier-allow",
+      "name": "bash",
+      "isError": false,
+      "value": {
+        "kind": "foreground",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "aborted": false,
+        "timeoutMs": 60000,
+        "stdout": {
+          "text": "",
+          "truncated": false
+        },
+        "stderr": {
+          "text": "",
+          "truncated": false
+        },
+        "sandbox": {
+          "mode": "danger-full-access",
+          "denied": false
+        }
+      },
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346410
+    },
+    {
+      "event": "tool-result",
+      "label": "classifier-deny",
+      "name": "bash",
+      "isError": true,
+      "error": "[auto-mode classifier deny] Deterministic fixture decision; no real API",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346421
+    },
+    {
+      "event": "tool-result",
+      "label": "classifier-ask",
+      "name": "bash",
+      "isError": true,
+      "error": "the user rejected escalating this command to \"danger-full-access\"; it stays denied, so stop and explain instead of working around it",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346436
+    },
+    {
+      "event": "tool-result",
+      "label": "hard-deny",
+      "name": "bash",
+      "isError": true,
+      "error": "[auto-mode hard deny] destructive operation targets system or credential-critical path /private/tmp/auto-mode-pre020-release-fixture-locked/user-home/.ssh/synthetic-protected-canary.txt",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346447
+    },
+    {
+      "event": "tool-result",
+      "label": "child-ordinary",
+      "name": "bash",
+      "isError": false,
+      "value": {
+        "kind": "foreground",
+        "exitCode": 0,
+        "signal": null,
+        "timedOut": false,
+        "aborted": false,
+        "timeoutMs": 60000,
+        "stdout": {
+          "text": "",
+          "truncated": false
+        },
+        "stderr": {
+          "text": "",
+          "truncated": false
+        },
+        "sandbox": {
+          "mode": "workspace-write",
+          "denied": false,
+          "enforcement": "full"
+        }
+      },
+      "sessionId": "a081bec7-26a7-4e4a-89aa-125ed57921dd",
+      "cwd": "/private/tmp",
+      "child": true,
+      "sessionIdentityMatches": true,
+      "preset": "custom",
+      "time": 1790529346521
+    },
+    {
+      "event": "tool-result",
+      "label": "child-widening",
+      "name": "bash",
+      "isError": true,
+      "error": "[auto-mode delegated escalation denied] a subagent cannot widen the parent workspace sandbox; report the blocked action to the parent",
+      "sessionId": "a081bec7-26a7-4e4a-89aa-125ed57921dd",
+      "cwd": "/private/tmp",
+      "child": true,
+      "sessionIdentityMatches": true,
+      "preset": "custom",
+      "time": 1790529346533
+    },
+    {
+      "event": "tool-result",
+      "label": "delegation",
+      "name": "subagent",
+      "isError": false,
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346553
+    },
+    {
+      "event": "tool-result",
+      "label": "classifier-error-1",
+      "name": "bash",
+      "isError": true,
+      "error": "[auto-mode classifier unavailable; action denied] Deterministic fixture classifier failure",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346574
+    },
+    {
+      "event": "tool-result",
+      "label": "classifier-error-2",
+      "name": "bash",
+      "isError": true,
+      "error": "[auto-mode classifier unavailable; action denied] Deterministic fixture classifier failure",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346585
+    },
+    {
+      "event": "tool-result",
+      "label": "classifier-error-3",
+      "name": "bash",
+      "isError": true,
+      "error": "the user rejected tool \"bash\"",
+      "sessionId": "session-261983f6-dccd-4715-95f3-278be0afcf76",
+      "cwd": "/private/tmp",
+      "child": false,
+      "sessionIdentityMatches": true,
+      "preset": "sandbox-auto",
+      "time": 1790529346596
+    }
+  ],
+  "unverified": [
+    "real provider APIs",
+    "browser interaction",
+    "PowerShell and Windows sandbox",
+    "live user-data migration"
+  ]
+}

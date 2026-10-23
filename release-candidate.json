@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "artifactSha256": "4f80cc04be461357da6b8764030070ca71e409b5c08b4b06b4c24436e5fd2948",
+  "node": "24.21.0",
+  "npm": "11.19.0",
+  "verifiedAt": "2026-09-29T13:49:50.722551+00:00",
+  "realApiPassed": true,
+  "realApiProvider": "deepseek-official",
+  "realApiModel": "deepseek-flash",
+  "workspace": "/tmp",
+  "realApiRequests": 19,
+  "supportedHosts": [
+    "0.2.0-rc.2",
+    "0.1.7-rc.2",
+    "0.1.5-rc.2",
+    "0.1.5-rc.1",
+    "0.1.2-rc.1",
+    "0.1.2-alpha.5",
+    "0.1.2-alpha.3",
+    "0.1.2-alpha.2"
+  ],
+  "evidence": [
+    "validation/0.2.0/source-contracts.json",
+    "validation/0.2.0/official-cohort.json",
+    "validation/0.2.0/prior-admission.json",
+    "validation/0.2.0/fixture.json",
+    "validation/0.2.0/persistence.json",
+    "validation/0.2.0/real-api.json"
+  ],
+  "adversarialReview": "Independent Host, client/distribution and dependency reviews found no unresolved blockers. Desktop/browser revalidation excluded at user request.",
+  "releaseTrack": "latest",
+  "upstreamTag": "dsh-v0.2.0-rc.2",
+  "upstreamMaster": "639ed015397290b3745d163aafe02ffee4aa3f84"
+}

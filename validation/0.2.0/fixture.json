@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "kind": "real-product-entry-with-fixture-model",
+  "realApi": false,
+  "host": "0.2.0-rc.2",
+  "pluginVersion": "0.2.0",
+  "artifactSha256": "4f80cc04be461357da6b8764030070ca71e409b5c08b4b06b4c24436e5fd2948",
+  "node": "v24.21.0",
+  "platform": "darwin",
+  "cohortCount": 278,
+  "exit": {
+    "code": 0,
+    "signal": null,
+    "timedOut": false,
+    "remainingProcessGroup": false
+  },
+  "assertions": {
+    "verificationCodeUnchanged": true,
+    "normalExit": true,
+    "noRemainingProcessGroup": true,
+    "productMarker": true,
+    "fixtureActive": true,
+    "activeServiceIdentitiesMatch": true,
+    "allToolsSettledCorrectly": true,
+    "ordinaryFile": true,
+    "fieldlessRetryExecuted": true,
+    "exactAllowExecuted": true,
+    "childExecuted": true,
+    "deniedEffectsAbsent": true,
+    "canaryUnchanged": true,
+    "allSessionCwdExistingTmp": true,
+    "parentAutoActive": true,
+    "childInheritedGuidance": true,
+    "recoverySchemaFieldsRemoved": true,
+    "ordinarySchemaFieldsRestored": true,
+    "classifierRouteReused": true,
+    "oneShotGrantAudited": true,
+    "manualAnswererUsedOnlyForAsks": true,
+    "actualProcessMatchesLaunch": true
+  },
+  "unverified": [
+    "real provider APIs",
+    "browser interaction",
+    "PowerShell and Windows sandbox",
+    "live user-data migration"
+  ]
+}
